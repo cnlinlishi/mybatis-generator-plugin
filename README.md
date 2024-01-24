@@ -1,6 +1,7 @@
 插件使用：
 
 在generator-configuration.xml 添加插件,使用自定义解析器
+```
 <generatorConfiguration>
     ...
     <context>
@@ -14,7 +15,9 @@
     </context>
     ...
 </generatorConfiguration>
+```
 pom.xml文件中增加依赖
+```
 <plugins>
     <plugin>
         <groupId>org.mybatis.generator</groupId>
@@ -30,4 +33,5 @@ pom.xml文件中增加依赖
         </dependencies>
     </plugin>
 </plugins>
+```
 
