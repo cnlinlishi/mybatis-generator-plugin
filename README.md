@@ -1,9 +1,15 @@
 # 效果：
-使用自定义解析器, tinyint/smallint 转成 Integer
+使用自定义解析器, tinyint/smallint 转成 Integer<br>
+sql定义
+```
+`is_delete` tinyint(3) unsigned NOT NULL default 0 COMMENT '是否逻辑删除 0:否；1:是'
+```
+XxxMapper.xml
 ```
 <result column="is_delete" jdbcType="INTEGER" property="isDelete" />
 ```
-使用插件MysqlLimitPlugin, XxxExample会生成分页参数
+使用插件MysqlLimitPlugin会生成分页参数<br>
+XxxExample
 
 ```
 private Integer limit;
@@ -36,7 +42,8 @@ XxxMapper.xml
 </select>
 ```
 
-使用插件LombokPlugin, 在生成的DO类加上@Data和@NoArgsConstructor注解，引入lombok.Data和lombok.NoArgsConstructor，并且将数据库的列的comment自动添加到字段注释上
+使用插件LombokPlugin, 在生成的DO类用lombok替换getter/setter，并且将数据库的列的comment自动添加到字段注释上<br>
+DO类
 ```
 import lombok.Data;
 import lombok.NoArgsConstructor;
