@@ -120,7 +120,7 @@ pom.xml文件中增加依赖
             <dependency>
                 <groupId>com.linlishi</groupId>
                 <artifactId>mybatis-generator-plugin</artifactId>
-                <version>1.0.0</version>
+                <version>1.0.2</version>
             </dependency>
         </dependencies>
     </plugin>
